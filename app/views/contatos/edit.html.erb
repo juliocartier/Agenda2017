@@ -1,0 +1,74 @@
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="index">Agenda SECITEC</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+             <h5> <a class="nav-link" href="index">Home
+                <span class="sr-only">(current)</span>
+              </a></h5>
+            </li>
+            <li class="nav-item">
+            <h5>  <%= link_to 'Adicionar Contato', new_contato_path, class: 'nav-link' %> </h5>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+<br/>
+<br/>
+<br/>
+
+  <div class="container">
+
+      <h1>Edit contact</h1>
+       
+      <%= form_with(model: @contato) do |form| %>
+       
+        <div class="form-group">
+          <div class="field">
+            <%= form.label :nome %><br>
+            <%= form.text_field :nome, class: "form-control" %>
+          </div>
+        </div>
+       
+        <div class="form-group">
+          <div class="field">
+            <%= form.label :endereco %><br>
+            <%= form.text_field :endereco, class: "form-control"  %>
+         </div>
+        </div>
+
+        <div class="form-group">
+          <div class="field">
+            <%= form.label :email %><br>
+            <%= form.text_field :email, class: "form-control" %>
+         </div>
+        </div>
+       
+       <div class="form-group">
+          <div class="field">
+            <%= form.label :dataNascimento %><br>
+            <%= form.date_select :dataNascimento, class: "form-control" %>
+          </div>
+        </div>
+
+
+        <p>
+          <%= form.submit class: "btn btn-outline-primary" %>
+        </p>
+       
+      <% end %>
+  </div>
+       
+<%= link_to 'Back', contatos_path, class: "btn btn-outline-dark" %>
+
+ <div class="py-5 bg-dark">
+          <div class="container-fluid">
+              <h5 class="text-center">SECITEC</h5>
+          </div>
+      </div>

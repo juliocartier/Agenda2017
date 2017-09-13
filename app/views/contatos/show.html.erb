@@ -1,0 +1,54 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="index">Agenda SECITEC</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+             <h5> <a class="nav-link" href="index">Home
+                <span class="sr-only">(current)</span>
+              </a></h5>
+            </li>
+            <li class="nav-item">
+            <h5>  <%= link_to 'Adicionar Contato', new_contato_path, class: 'nav-link' %> </h5>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <br/>
+    <br/>
+    <br/>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @contato.nome %>
+</p>
+ 
+<p>
+  <strong>Endereco:</strong>
+  <%= @contato.endereco %>
+</p>
+
+<p>
+  <strong>E-mail:</strong>
+  <%= @contato.email %>
+</p>
+
+<p>
+  <strong>Data Nascimento:</strong>
+  <%= @contato.dataNascimento %>
+</p>
+
+
+<%= link_to 'Editar', edit_contato_path(@contato), class: "btn btn-outline-dark" %>
+<%= link_to 'Voltar', contatos_path, class: "btn btn-outline-dark" %>
+
+ <div class="py-5 bg-dark">
+          <div class="container-fluid">
+              <h5 class="text-center">SECITEC</h5>
+          </div>
+      </div>
